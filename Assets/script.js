@@ -16,20 +16,22 @@ let save16h = $('#save16h')
 let save17h = $('#save17h')
 
 var currentTime = moment()
-timeNow = currentTime.format("H");
-        
+timeNow = $(moment().hour())[0]; 
+// timeNow = currentTime.format("H");
+
 
         for (let i = 0; i < 9; i++) {
             
             console.log("value"+test[0].name);
             
-            if(test[i].name > timeNow){
-               
-                test[i].setAttribute("class", "future form-control myclass");
+            if (test[i].name > timeNow){
+
+               test[i].setAttribute("class", "future form-control myclass");
+
             } else if (test[i].name == timeNow){
                 test[i].setAttribute("class", "current form-control myclass");
                 
-            } else {
+            } else if (test[i].name < timeNow) {
                 test[i].setAttribute("class", "expired form-control myclass");
             }
         }
