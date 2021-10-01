@@ -19,10 +19,10 @@ var currentTime = moment()
 timeNow = $(moment().hour())[0]; 
 // timeNow = currentTime.format("H");
 
-
+        //this loop will get the value of each name attribute on each textarea element and compairs it to the current time
         for (let i = 0; i < 9; i++) {
             
-            console.log("value"+test[0].name);
+           
             
             if (test[i].name > timeNow){
 
